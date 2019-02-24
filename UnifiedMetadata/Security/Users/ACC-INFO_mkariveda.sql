@@ -1,0 +1,6 @@
+IF NOT EXISTS (SELECT * FROM master.dbo.syslogins WHERE loginname = N'ACC-INFO\mkariveda')
+CREATE LOGIN [ACC-INFO\mkariveda] FROM WINDOWS
+GO
+CREATE USER [ACC-INFO\mkariveda] FOR LOGIN [ACC-INFO\mkariveda] WITH DEFAULT_SCHEMA=[ACC-INFO\mkariveda]
+GO
+REVOKE CONNECT TO [ACC-INFO\mkariveda]
