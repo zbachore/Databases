@@ -23,10 +23,15 @@ Date			Author			Reason for Change
 DECLARE @ErrorMessage VARCHAR(max),
 		@TableName VARCHAR(MAX) = 'RegistrySections',
 		@ColumnName VARCHAR(MAX) = 'RegistrySectionID',
-		@RequestedTime DATETIME2 = SYSDATETIME();
+		@RequestedTime DATETIME2 = SYSDATETIME(),
+		@RegistryVersionID INT;
 
 BEGIN TRY
 BEGIN TRAN;
+
+SELECT @RegistryVersionID = RegistryVersionID 
+FROM dbo.Project 
+WHERE ProjectId = @ProjectID;
 
 WITH Source AS (
 SELECT DISTINCT
@@ -100,8 +105,7 @@ AND T.RegistrySectionId IN
 (
 SELECT RegistrySectionID 
 FROM UnifiedMetadata.rdd.RegistrySections
-WHERE RegistrySectionID NOT IN (SELECT RegistrySectionID 
-FROM UnifiedMetadata_Stage.rdd.RegistrySections)
+WHERE RegistryVersionID = @RegistryVersionID
 )
 THEN DELETE
 
