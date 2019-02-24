@@ -1,3 +1,0 @@
-CREATE SCHEMA [cda]
-AUTHORIZATION [dbo]
-GO
