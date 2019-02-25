@@ -1,0 +1,33 @@
+CREATE TABLE [dbo].[v1_Mapping]
+(
+[SECTION_TITLE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Data Element Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Element Short Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Data Element Sequence] [float] NULL,
+[REGISTRY_DATA_ELEMENT_ID] [float] NULL,
+[Data Type] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UOM] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[IS_MULTI_SELECT] [float] NULL,
+[Concept ID] [float] NULL,
+[Concept Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[WORKFLOW_CONCEPT_ID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Parent Concept] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DataSource] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Instruction] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CONTAINING_DATA_ELEMENT_ID] [float] NULL,
+[Schema Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Table Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Column Name] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Time Part] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Hardcoded _ConceptID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UnitConceptID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Flip Indicator Value] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Comment] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Mapping Status] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[F25] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ETLStage] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[EDWStage] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[EDW] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Change Note] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO

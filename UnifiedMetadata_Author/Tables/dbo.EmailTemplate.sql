@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[EmailTemplate]
+(
+[Id] [int] NOT NULL IDENTITY(1, 1),
+[Name] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Subject] [varchar] (500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Body] [varchar] (max) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[EmailTemplate] ADD CONSTRAINT [PK__EmailTem__3214EC077F60ED59] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[EmailTemplate] ADD CONSTRAINT [UQ__EmailTem__737584F6023D5A04] UNIQUE NONCLUSTERED  ([Name]) ON [PRIMARY]
+GO
