@@ -1,0 +1,3 @@
+CREATE SCHEMA [ACC-INFO\mkariveda]
+AUTHORIZATION [ACC-INFO\mkariveda]
+GO
