@@ -1,0 +1,13 @@
+CREATE TABLE [dbo].[Tags]
+(
+[Id] [int] NOT NULL IDENTITY(1, 1),
+[Tag] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[UpdatedBy] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CreatedDate] [datetime] NULL,
+[UpdatedDate] [datetime] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Tags] ADD CONSTRAINT [PK__Tags__3214EC0725869641] PRIMARY KEY CLUSTERED  ([Id]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Tags] ADD CONSTRAINT [UQ__Tags__C4516413286302EC] UNIQUE NONCLUSTERED  ([Tag]) ON [PRIMARY]
+GO
